@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Novia Web crée des sites web modernes et simples pour les commerces et indépendants.">
+  <title>Novia Web — Des sites qui donnent vie à votre activité.</title>
+  <style>
+    :root{
+      --bg:#070b16; --card:#0d1424; --text:#f5f7fb; --muted:#a9b2c4;
+      --blue:#2f8cff; --blue2:#38c9ff; --line:rgba(255,255,255,.09);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,11,22,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.03em}
+    .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--blue2),#2949ff);display:grid;place-items:center;font-weight:900}
+    .navlinks{display:flex;gap:28px;color:#cbd3e2;font-size:.95rem}
+    .navlinks a:hover{color:white}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;background:linear-gradient(135deg,var(--blue2),var(--blue));font-weight:750;color:white;box-shadow:0 12px 35px rgba(47,140,255,.2)}
+    .btn.secondary{background:transparent;border:1px solid var(--line);box-shadow:none}
+    .hero{padding:110px 0 95px;text-align:center;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:600px;height:600px;background:rgba(47,140,255,.13);filter:blur(100px);border-radius:50%;left:50%;top:-250px;transform:translateX(-50%);pointer-events:none}
+    .eyebrow{color:#62d5ff;font-weight:750;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;position:relative}
+    h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:1.02;letter-spacing:-.055em;margin:18px auto 22px;max-width:900px;position:relative}
+    .gradient{background:linear-gradient(90deg,#fff,#8adfff 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:650px;margin:0 auto 32px;color:var(--muted);font-size:1.12rem}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    section{padding:90px 0}
+    .section-title{text-align:center;max-width:680px;margin:0 auto 48px}
+    .section-title h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em}
+    .section-title p{color:var(--muted);margin-top:12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:20px;padding:28px}
+    .icon{font-size:1.8rem;margin-bottom:16px}
+    .card h3{margin-bottom:8px}
+    .card p{color:var(--muted)}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{padding:25px;border-top:1px solid #24476b}
+    .num{color:#55cbff;font-weight:800;font-size:.85rem;margin-bottom:12px}
+    .portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .demo{min-height:260px;border-radius:22px;border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,#111c33,#09101e)}
+    .demo:nth-child(2){background:linear-gradient(145deg,#16200e,#0a110d)}
+    .demo small{color:#7fdfff;text-transform:uppercase;letter-spacing:.1em}
+    .demo h3{font-size:1.7rem;margin:6px 0}
+    .demo p{color:#b6c0d0}
+    .cta{background:linear-gradient(135deg,rgba(47,140,255,.16),rgba(56,201,255,.05));border:1px solid var(--line);border-radius:28px;padding:55px;text-align:center}
+    .cta p{color:var(--muted);max-width:600px;margin:12px auto 25px}
+    form{max-width:620px;margin:30px auto 0;display:grid;gap:12px;text-align:left}
+    input,textarea{width:100%;padding:14px 15px;border-radius:12px;border:1px solid var(--line);background:#080d19;color:white;font:inherit}
+    textarea{min-height:130px;resize:vertical}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:#8791a5;font-size:.9rem}
+    @media(max-width:800px){
+      .navlinks{display:none}.grid,.process,.portfolio{grid-template-columns:1fr}
+      .hero{padding:85px 0 70px} section{padding:70px 0}.cta{padding:35px 22px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#accueil"><span class="mark">N</span><span>NOVIA <span style="color:#55cbff">WEB</span></span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#process">Comment ça marche</a>
+      </div>
+      <a class="btn" href="#contact">Parlons-en</a>
+    </nav>
+  </div>
+</header>
+
+<main id="accueil">
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Création de sites web</div>
+      <h1>Votre activité mérite un site <span class="gradient">à la hauteur.</span></h1>
+      <p>Novia Web crée des sites modernes, simples et adaptés aux commerces et indépendants qui veulent être visibles en ligne.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Créer mon site</a>
+        <a class="btn secondary" href="#realisations">Voir nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Tout ce qu'il faut pour démarrer</h2>
+        <p>Un site clair, professionnel et pensé pour être consulté sur téléphone comme sur ordinateur.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">🌐</div><h3>Création de site</h3><p>Une présence en ligne conçue autour de votre activité et de vos objectifs.</p></article>
+        <article class="card"><div class="icon">📱</div><h3>Adapté au mobile</h3><p>Une expérience agréable sur smartphone, tablette et ordinateur.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>Design personnalisé</h3><p>Une identité visuelle cohérente avec votre commerce et votre clientèle.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="realisations">
+    <div class="container">
+      <div class="section-title">
+        <h2>Quelques exemples</h2>
+        <p>Des concepts de démonstration que nous pouvons adapter à différents métiers.</p>
+      </div>
+      <div class="portfolio">
+        <article class="demo"><small>Démo · Café</small><h3>Maison Alba</h3><p>Café, brunch & pâtisseries — une vitrine chaleureuse et simple.</p></article>
+        <article class="demo"><small>Démo · Artisan</small><h3>Atelier Martin</h3><p>Présentation des services, réalisations et coordonnées.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-title">
+        <h2>Simple, du début à la mise en ligne</h2>
+      </div>
+      <div class="process">
+        <div class="step"><div class="num">01 — ON ÉCHANGE</div><h3>Votre besoin</h3><p>On comprend votre activité et ce que vos clients doivent trouver.</p></div>
+        <div class="step"><div class="num">02 — ON CRÉE</div><h3>La première version</h3><p>Nous construisons le design, les pages et les contenus.</p></div>
+        <div class="step"><div class="num">03 — VOUS VALIDEZ</div><h3>Les ajustements</h3><p>On corrige et améliore le site selon vos retours.</p></div>
+        <div class="step"><div class="num">04 — EN LIGNE</div><h3>La publication</h3><p>Le site est préparé pour être mis en ligne avec la solution choisie.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="cta">
+        <div class="eyebrow">Votre projet</div>
+        <h2>Parlons de votre site.</h2>
+        <p>Expliquez-nous votre activité et ce que vous aimeriez montrer à vos clients.</p>
+        <form onsubmit="event.preventDefault(); alert('Merci ! Ce formulaire est une démo. Pour recevoir de vrais messages, nous connecterons ensuite un service de formulaire.');">
+          <input required type="text" placeholder="Votre nom ou entreprise">
+          <input required type="email" placeholder="Votre e-mail">
+          <textarea required placeholder="Parlez-nous de votre projet..."></textarea>
+          <button class="btn" type="submit">Envoyer ma demande</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Novia Web — Site de démonstration.</div>
+</footer>
+</body>
+</html>
