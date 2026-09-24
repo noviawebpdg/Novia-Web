@@ -135,10 +135,14 @@
         <div class="eyebrow">Votre projet</div>
         <h2>Parlons de votre site.</h2>
         <p>Expliquez-nous votre activité et ce que vous aimeriez montrer à vos clients.</p>
-        <form onsubmit="event.preventDefault(); alert('Merci ! Ce formulaire est une démo. Pour recevoir de vrais messages, nous connecterons ensuite un service de formulaire.');">
-          <input required type="text" placeholder="Votre nom ou entreprise">
-          <input required type="email" placeholder="Votre e-mail">
-          <textarea required placeholder="Parlez-nous de votre projet..."></textarea>
+        <form action="https://formsubmit.co/gigonarthur@icloud.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande — Novia Web">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://noviaweb.github.io/">
+          <input required type="text" name="nom" placeholder="Votre nom ou entreprise">
+          <input required type="email" name="email" placeholder="Votre e-mail">
+          <textarea required name="message" placeholder="Parlez-nous de votre projet..."></textarea>
           <button class="btn" type="submit">Envoyer ma demande</button>
         </form>
       </div>
